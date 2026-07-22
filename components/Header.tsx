@@ -1,7 +1,7 @@
 export default function Header() {
   return (
     <header>
-      <h1>🏈 Fantasy Football Central</h1>
+      <h1>💎 Liga Diamante</h1>
 
       <nav>
         <a href="/">Home</a>

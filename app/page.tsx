@@ -5,21 +5,56 @@ export default function Home() {
     <main>
       <Header />
 
-      <h2>Latest Updates</h2>
-
-      <div>
-        <h3>Week 1 Recap</h3>
+      <section>
+        <h2>Welcome to Liga Diamante</h2>
         <p>
-          The season is underway. Who dominated? Who got embarrassed?
+          The official home of our fantasy football league.
+          News, standings, matchups, and league chaos all in one place.
         </p>
-      </div>
+      </section>
 
-      <div>
-        <h3>League News</h3>
+      <section>
+        <h2>🏆 League Dashboard</h2>
+
+        <div>
+          <h3>Current Week</h3>
+          <p>Week 1 Matchups Coming Soon</p>
+        </div>
+
+        <div>
+          <h3>Standings</h3>
+          <p>League rankings will appear here.</p>
+        </div>
+      </section>
+
+
+      <section>
+        <h2>📰 Latest Updates</h2>
+
+        <article>
+          <h3>Week 1 Recap</h3>
+          <p>
+            Who dominated? Who suffered the worst loss?
+            The season story begins here.
+          </p>
+        </article>
+
+        <article>
+          <h3>Commissioner Updates</h3>
+          <p>
+            Trades, announcements, and league news.
+          </p>
+        </article>
+      </section>
+
+
+      <section>
+        <h2>💬 League Chat</h2>
         <p>
-          Commissioner updates, trades, injuries, and announcements.
+          Live league conversations will appear here soon.
         </p>
-      </div>
+      </section>
+
     </main>
   );
 }
