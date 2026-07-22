@@ -1,59 +1,58 @@
 import Header from "@/components/Header";
+import Hero from "@/components/Hero";
+import NewsCard from "@/components/NewsCard";
+import MatchupCard from "@/components/MatchupCard";
+import PowerRanking from "@/components/PowerRanking";
+import ChatPreview from "@/components/ChatPreview";
+
 
 export default function Home() {
   return (
     <main>
+
       <Header />
 
-      <section>
-        <h2>Welcome to Liga Diamante</h2>
-        <p>
-          The official home of our fantasy football league.
-          News, standings, matchups, and league chaos all in one place.
-        </p>
-      </section>
+      <Hero />
+
 
       <section>
-        <h2>🏆 League Dashboard</h2>
+        <h2>🔥 Latest Headlines</h2>
 
-        <div>
-          <h3>Current Week</h3>
-          <p>Week 1 Matchups Coming Soon</p>
-        </div>
+        <NewsCard
+          title="Week 1 Recap"
+          description="The season begins with surprising performances and brutal losses."
+        />
 
-        <div>
-          <h3>Standings</h3>
-          <p>League rankings will appear here.</p>
-        </div>
+        <NewsCard
+          title="Diamond of the Week"
+          description="The league's top performer earns the first weekly honor."
+        />
+
       </section>
 
 
       <section>
-        <h2>📰 Latest Updates</h2>
+        <h2>🏈 Matchup Center</h2>
 
-        <article>
-          <h3>Week 1 Recap</h3>
-          <p>
-            Who dominated? Who suffered the worst loss?
-            The season story begins here.
-          </p>
-        </article>
+        <MatchupCard
+          homeTeam="Team Alpha"
+          awayTeam="Team Bravo"
+        />
 
-        <article>
-          <h3>Commissioner Updates</h3>
-          <p>
-            Trades, announcements, and league news.
-          </p>
-        </article>
       </section>
 
 
       <section>
-        <h2>💬 League Chat</h2>
-        <p>
-          Live league conversations will appear here soon.
-        </p>
+        <h2>📊 Power Rankings</h2>
+
+        <PowerRanking rank={1} team="Team Alpha" />
+        <PowerRanking rank={2} team="Team Bravo" />
+        <PowerRanking rank={3} team="Team Charlie" />
+
       </section>
+
+
+      <ChatPreview />
 
     </main>
   );
