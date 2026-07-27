@@ -1,8 +1,10 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --diamond-blue: #8fd3ff;
+  --mine-dark: #0f172a;
+  --mine-card: #1e293b;
+  --silver: #e2e8f0;
 }
 
 @theme inline {

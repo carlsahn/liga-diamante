@@ -1,46 +1,64 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import FeaturedStory from "@/components/FeaturedStory";
-import NewsCard from "@/components/NewsCard";
+import LeagueDashboard from "@/components/LeagueDashboard";
+import WeeklySpotlight from "@/components/WeeklySpotlight";
+import ArticleCard from "@/components/ArticleCard";
 import MatchupCard from "@/components/MatchupCard";
 import PowerRanking from "@/components/PowerRanking";
 import ChatPreview from "@/components/ChatPreview";
-import LeagueDashboard from "@/components/LeagueDashboard";
+import SectionHeader from "@/components/SectionHeader";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-slate-900 text-white">
+    <main className="min-h-screen bg-slate-950 text-white bg-[radial-gradient(circle_at_top,_rgba(96,165,250,0.12),transparent_40%)]">
       <Header />
 
       <Hero />
 
       <div className="mx-auto max-w-6xl space-y-16 px-6 pb-16">
-        <FeaturedStory />
+        <section className="relative">
+  <FeaturedStory />
+</section>
 
-        <LeagueDashboard />
+        <div className="grid gap-6 lg:grid-cols-2">
+  <LeagueDashboard />
+
+  <WeeklySpotlight />
+</div>
 
         <section>
-          <h2 className="mb-6 text-3xl font-bold">
-            🔥 Latest Headlines
-          </h2>
+          <SectionHeader
+  eyebrow="Latest Updates"
+  title="From the Mines"
+/>
 
-          <div className="grid gap-6 md:grid-cols-2">
-            <NewsCard
-              title="Week 1 Recap"
-              description="The season begins with surprising performances and brutal losses."
+          <div className="grid gap-6 md:grid-cols-3">
+            <ArticleCard
+              category="Week Recap"
+              title="The Battle for the Diamond Begins"
+              description="The opening week delivered surprises, heartbreak, and early championship contenders."
             />
 
-            <NewsCard
-              title="Diamond of the Week"
-              description="The league's top performer earns the first weekly honor."
+            <ArticleCard
+              category="League News"
+              title="Trade Rumors Start Flying"
+              description="Managers are already making moves as the race heats up."
+            />
+
+            <ArticleCard
+              category="Power Rankings"
+              title="Who Owns the Mountain?"
+              description="The first rankings of the season reveal the early favorites."
             />
           </div>
         </section>
 
         <section>
-          <h2 className="mb-6 text-3xl font-bold">
-            🏈 Matchup Center
-          </h2>
+          <SectionHeader
+  eyebrow="Weekly Battles"
+  title="Matchup Center"
+/>
 
           <MatchupCard
             homeTeam="Team Alpha"
@@ -49,9 +67,10 @@ export default function Home() {
         </section>
 
         <section>
-          <h2 className="mb-6 text-3xl font-bold">
-            📊 Power Rankings
-          </h2>
+          <SectionHeader
+  eyebrow="League Hierarchy"
+  title="Power Rankings"
+/>
 
           <div className="space-y-3">
             <PowerRanking rank={1} team="Team Alpha" />
